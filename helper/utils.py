@@ -1,5 +1,5 @@
 import math, time, pytz, random, string
-from datetime import datetime
+from datetime import datetime, date
 from pytz import timezone
 from shortzy import Shortzy
 from config import Config, Txt
@@ -86,6 +86,7 @@ async def send_log(b, u):
 
 TOKENS = {}
 VERIFIED = {}
+
 
 async def get_verify_shorted_link(link):
     shortzy = Shortzy(api_key=API, base_site=URL)

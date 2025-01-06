@@ -77,7 +77,7 @@ status - Check bot status [FOR ADMINS USE ONLY].
 
 
 ### 😍 BOTS CHANNEL 😍
-- [Madflix Botz](https://t.me/net_pro_max)
+- [Network](https://t.me/net_pro_max)
 - [Dvis](https://t.me/DvisDmBot)
 
 ### ❤️ RESPECTING ❤️

@@ -13,6 +13,7 @@ import time
 import re
 
 renaming_operations = {}
+VERIFY = {}
 
 # Pattern 1: S01E02 or S01EP02
 pattern1 = re.compile(r'S(\d+)(?:E|EP)(\d+)')

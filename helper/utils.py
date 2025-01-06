@@ -2,7 +2,7 @@ import math, time, pytz, random, string
 from datetime import datetime
 from pytz import timezone
 from shortzy import Shortzy
-from config import Config, Txt, API, URL
+from config import Config, Txt
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 async def progress_for_pyrogram(current, total, ud_type, message, start):

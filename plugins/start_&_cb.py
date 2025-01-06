@@ -4,7 +4,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ForceRepl
 
 from helper.database import DvisPappa
 from config import Config, Txt
-from utils import verify_user, check_token
+from helper.utils import verify_user, check_token
 
 @Client.on_message(filters.private & filters.command("start"))
 async def start(client, message):

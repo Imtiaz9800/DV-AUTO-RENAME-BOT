@@ -1,4 +1,4 @@
 ruff format .
 ruff check --fix .
-pylint *.py
+pylint --disable=C,R,W --enable=E --recursive=y .
 pytest

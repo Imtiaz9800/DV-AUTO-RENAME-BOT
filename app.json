@@ -2,8 +2,7 @@
     "name": "Auto Renamer Bot",
     "description": "Telegram Auto File Renamer Bot ",
     "logo": "https://graph.org/file/2f461540c83b362772714.jpg",
-    "keywords": ["Auto Renamer Bot", "Mongo DB"],    
-    "repository": "https://github.com/IamDvis/DV-AUTO-RENAME-BOT",
+    "keywords": ["Auto Renamer Bot", "Mongo DB"],
     "env": {
         "API_ID": {
             "description": "Your APP ID From my.telegram.org ",

@@ -3,30 +3,30 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID    = os.environ.get("API_ID", "")
-    API_HASH  = os.environ.get("API_HASH", "")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
+    API_ID    = os.environ.get("API_ID", "21489763")
+    API_HASH  = os.environ.get("API_HASH", "308f5362db7844a59272c33634e9e792")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7376265328:AAERJUwTDfdDu5P08Zavjz1TeKs1XaiYwVg") 
 
     # database config
-    DB_NAME = os.environ.get("DB_NAME","DvisPappa")     
-    DB_URL  = os.environ.get("DB_URL","")
+    DB_NAME = os.environ.get("DB_NAME","Movies7x")     
+    DB_URL  = os.environ.get("DB_URL","mongodb+srv://7xmovieshub:uoc0ajFxBrQ0wksk@movies7x.4axozzk.mongodb.net/?retryWrites=true&w=majority&appName=Movies7x")
  
     # other configs
     BOT_UPTIME  = time.time()
     START_PIC   = os.environ.get("START_PIC", "https://files.catbox.moe/4kwe69.jpg")
-    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '').split()]
+    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '6474779115').split()]
     FORCE_SUB   = os.environ.get("FORCE_SUB", "") 
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", ""))
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002116501788"))
     
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK", "True"))
 
     # Token Verification
-    API = os.environ.get("API", "87b1cadedd5f3ae42ea98cce01cf85c5136241b8") # shortlink api
-    URL = os.environ.get("URL", "modijiurl.com") # shortlink domain without https://
-    VERIFY_TUTORIAL = os.environ.get("VERIFY_TUTORIAL", "https://t.me/+cXIPgHSuJnxiNjU1") # how to open link 
+    API = os.environ.get("API", "") # shortlink api
+    URL = os.environ.get("URL", "") # shortlink domain without https://
+    VERIFY_TUTORIAL = os.environ.get("VERIFY_TUTORIAL", "https://t.me/+cXIPgHSu") # how to open link 
     BOT_USERNAME = os.environ.get("BOT_USERNAME", "Auto_x_Rename_Robot") # bot username without @
-    VERIFY = os.environ.get("VERIFY", "True") # set True Or False and make sure spelling is correct and first letter capital.
+    VERIFY = os.environ.get("VERIFY", "False") # set True Or False and make sure spelling is correct and first letter capital.
 
 
 class Txt(object):
@@ -42,7 +42,7 @@ class Txt(object):
     
 ➻ Use /tutorial Command To Know How To Use Me.
     
-<b>Bot Is Made By @net_pro_max</b>"""
+<b>Bot Is Made By </b>"""
     
     FILE_NAME_TXT = """<b><u>SETUP AUTO RENAME FORMAT</u></b>
 
@@ -58,11 +58,9 @@ Use These Keywords To Setup Custom File Name
     ABOUT_TXT = f"""<b>🤖 My Name :</b> <a href='https://t.me/AutoRenameXBot'>Auto Rename Bot ⚡</a>
 <b>📝 Language :</b> <a href='https://python.org'>Python 3</a>
 <b>📚 Library :</b> <a href='https://pyrogram.org'>Pyrogram 2.0</a>
-<b>🚀 Server :</b> <a href='https://heroku.com'>Heroku</a>
-<b>📢 Channel :</b> <a href='https://t.me/net_pro_max'>Network</a>
-<b>🧑‍💻 Developer :</b> <a href='https://t.me/DvisDmBot'>Dvis Pappa</a>
+
     
-<b>♻️ Bot Made By :</b> @net_pro_max"""
+<b>♻️ Bot Made By :</b> """
 
     
     THUMBNAIL_TXT = """<b><u>🖼️  HOW TO SET THUMBNAIL</u></b>

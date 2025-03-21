@@ -1,15 +1,18 @@
 {
     "name": "Auto Renamer Bot",
-    "description": "Telegram Auto File Renamer Bot ",
+    "description": "Telegram Auto File Renamer Bot",
     "logo": "https://graph.org/file/2f461540c83b362772714.jpg",
-    "keywords": ["Auto Renamer Bot", "Mongo DB"],
+    "keywords": [
+        "Auto Renamer Bot",
+        "Mongo DB"
+    ],
     "env": {
         "API_ID": {
-            "description": "Your APP ID From my.telegram.org ",
+            "description": "Your APP ID From my.telegram.org",
             "value": "14050586"
         },
         "API_HASH": {
-            "description": "Your API Hash From my.telegram.org ",
+            "description": "Your API Hash From my.telegram.org",
             "value": "42a60d9c657b106370c79bb0a8ac560c"
         },
         "WEBHOOK": {
@@ -17,29 +20,29 @@
             "value": "False"
         },
         "FORCE_SUB": {
-            "description": "Your force sub channel user name without [@] ",
+            "description": "Your force sub channel user name without [@]",
             "value": "-1002053640388",
-            "required": false 
+            "required": false
         },
         "BOT_TOKEN": {
             "description": "Your Bot Token From @BotFather",
             "value": ""
         },
         "ADMIN": {
-            "description":"Add Your User ID multiple is use space to split"
+            "description": "Add Your User ID multiple is use space to split",
             "value": "1679112664"
         },
         "LOG_CHANNEL": {
-            "description":"Bot Log Sending Channel (just create a private channel and add bot to admin and take channel id to add this variable) ⚠️ id startswith -100 must",
-            "value": "-1002323080181"
-            "required": false           
+            "description": "Bot Log Sending Channel (just create a private channel and add bot to admin and take channel id to add this variable) ⚠️ id startswith -100 must",
+            "value": "-1002323080181",
+            "required": false
         },
         "DB_URL": {
             "description": "Your Mongo DB URL Obtained From mongodb.com",
             "value": "mongodb+srv://hnyx:wywyw2@cluster0.9dxlslv.mongodb.net/?retryWrites=true&w=majority"
         },
-        "DB_NAME":{ 
-            "description":"Your Mongo DB Database Name ",
+        "DB_NAME": {
+            "description": "Your Mongo DB Database Name",
             "value": "DvisPappa",
             "required": false
         },
@@ -47,11 +50,30 @@
             "description": "Your Bot start cmd Pic from @MT_TelegraPH_Bot",
             "value": "https://files.catbox.moe/4kwe69.jpg",
             "required": false
+        },
+        "UPSTREAM_REPO": {
+            "description": "If you dont know this, Leave as it is",
+            "value": "https://github.com/IamDvis/DV-AUTO-RENAME-BOT",
+            "required": true
+        },
+        "UPSTREAM_BRANCH": {
+            "description": "Upstream Repo's Branch Name",
+            "value": "main",
+            "required": true
         }
     },
     "buildpacks": [
         {
             "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
         }
-    ]
+    ],
+    "formation": {
+        "worker": {
+            "quantity": "2x",
+            "size": "Standard"
+        }
+    }
 }
